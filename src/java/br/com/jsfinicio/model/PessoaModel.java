@@ -30,22 +30,14 @@ public abstract class PessoaModel implements Serializable{
     
     @Column(nullable = false, length = 100)
     private String nome;
+    @Column(nullable = false, length = 100)
+    private String email;
     @Column(nullable = false)
     private int idade;
     @Column(nullable = false, length = 11)
     private long cpf;
     @Column(nullable = false, length = 20)
     private String rg;
-
-    public PessoaModel(String nome, int idade, long cpf, String sexo, String rg) {
-        this.nome = nome;
-        this.idade = idade;
-        this.cpf = cpf;
-        this.rg = rg;
-    }
-
-    public PessoaModel() {
-    }
 
     public String getRg() {
         return rg;
@@ -85,6 +77,14 @@ public abstract class PessoaModel implements Serializable{
 
     public void setIdpessoa(long idpessoa) {
         this.idpessoa = idpessoa;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
 }

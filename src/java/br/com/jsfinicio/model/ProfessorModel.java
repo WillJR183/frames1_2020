@@ -33,13 +33,6 @@ public class ProfessorModel extends PessoaModel implements Serializable{
     @Cascade(CascadeType.SAVE_UPDATE)
     private AreaModel area;
 
-    public ProfessorModel(String nome, int idade, long cpf, String sexo, String rg) {
-        super(nome, idade, cpf, sexo, rg);
-    }
-
-    public ProfessorModel() {
-    }
-   
     public AreaModel getArea() {
         return area;
     }

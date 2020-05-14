@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/jsfInicio/web/aluno/cadastrarAluno.xhtml</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/jsfInicio/src/java/br/com/jsfinicio/model/DisciplinaModel.java</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/jsfInicio/src/java/br/com/jsfinicio/model/PessoaModel.java</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/jsfInicio/src/java/br/com/jsfinicio/model/AlunoModel.java</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/jsfInicio/src/java/hibernate.cfg.xml</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/jsfInicio/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/jsfInicio/src/conf/MANIFEST.MF</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/jsfInicio/web/aluno/buscarAluno.xhtml</file>
+        </group>
     </open-files>
 </project-private>
