@@ -13,33 +13,33 @@
             <div class="form-row">
                 <div class="form-group col-md-9">
                     <label for="nome">Nome</label>
-                    <input value="#{alunoController.alunoModel.nome}" class="form-control" type="nome" name="nome" id="email"/>
+                    <h:inputText value="#{alunoController.alunoModel.nome}" class="form-control"/>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="cpf">CPF</label>
-                    <input value="#{alunoController.alunoModel.cpf}" class="form-control" type="text" name="cpf" id="cpf"/>
+                    <h:inputText value="#{alunoController.alunoModel.cpf}" class="form-control"/>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="rg">RG</label>
-                    <input value="#{alunoController.alunoModel.rg}" class="form-control" type="text" name="rg" id="rg"/>
+                    <h:inputText value="#{alunoController.alunoModel.rg}" class="form-control"/>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="ra">RA</label>
-                    <input value="#{alunoController.alunoModel.ra}" class="form-control" type="number" name="ra" id="ra"/>
+                    <h:inputText value="#{alunoController.alunoModel.ra}" class="form-control"/>
                 </div>
                 <div class="form-group col-md-1">
                     <label for="idade">Idade</label>
-                    <input value="#{alunoController.alunoModel.idade}" class="form-control" type="number" name="idade" id="idade"/>
+                    <h:inputText value="#{alunoController.alunoModel.idade}" class="form-control"/>
                 </div>
                 <div class="form-group col-md-5">
                     <label for="email">E-Mail</label>
-                    <input value="#{alunoController.alunoModel.email}" class="form-control" placeholder="Fulano@mail.com" type="text" name="email" id="email"/>
+                    <h:inputText value="#{alunoController.alunoModel.email}" class="form-control"/>
                 </div>
                 
             </div>
-            <h:commandButton class="btn btn-primary" value="Salvar" action="#{carroController.salvar()}"/>
+            <h:commandButton class="btn btn-primary" value="Salvar" action="#{alunoController.salvar()}"/>
         </h:form>
     </ui:define>
 </ui:composition>

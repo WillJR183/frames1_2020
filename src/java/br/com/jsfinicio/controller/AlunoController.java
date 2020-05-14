@@ -25,7 +25,8 @@ public class AlunoController {
     }
     
     public void salvar(){
-        this.alunoRepository.salvar(alunoModel);
+        System.err.println(this.alunoModel.getNome() + "  -  " + this.alunoModel.getRg() + "  -  " + this.alunoModel.getEmail());
+        this.alunoRepository.salvar(this.alunoModel);
     }
 
     public AlunoModel getAlunoModel() {

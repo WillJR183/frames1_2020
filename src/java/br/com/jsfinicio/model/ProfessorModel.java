@@ -6,6 +6,7 @@
 package br.com.jsfinicio.model;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -25,6 +26,8 @@ import org.hibernate.annotations.FetchMode;
 @Table(name = "professor")
 @PrimaryKeyJoinColumn(name = "idpessoa")
 public class ProfessorModel extends PessoaModel implements Serializable{
+    
+    @Column(nullable = false)
     private long siape;
     
     @ManyToOne(fetch = FetchType.EAGER)
