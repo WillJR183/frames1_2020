@@ -7,6 +7,26 @@
 
     <ui:define name="conteudo">
         <h3>Resultado da busca por alunos</h3>
+        <table class="table" onload="#{alunoController.buscar()}">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-Mail</th>
+                    <th scope="col">idade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ui:repeat value="#{alunoController.listaDeAlunos}" var="aluno">
+                    <tr>
+                        <td>#{aluno.idpessoa}</td>
+                        <td>#{aluno.nome}</td>
+                        <td>#{aluno.email}</td>
+                        <td>#{aluno.idade}</td>
+                    </tr>
+                </ui:repeat> 
+            </tbody>
+        </table>
     </ui:define>
 </ui:composition>
 

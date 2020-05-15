@@ -7,6 +7,8 @@ package br.com.jsfinicio.controller;
 
 import br.com.jsfinicio.model.AlunoModel;
 import br.com.jsfinicio.repository.AlunoRepository;
+import java.util.ArrayList;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 
 /**
@@ -18,17 +20,22 @@ public class AlunoController {
     
     private AlunoModel alunoModel;
     private AlunoRepository alunoRepository;
+    private List<AlunoModel> listaDeAlunos;
     
     public AlunoController(){
         this.alunoModel = new AlunoModel();
         this.alunoRepository = new AlunoRepository();
+        this.listaDeAlunos =  new ArrayList<>();
     }
     
     public void salvar(){
-        System.err.println(this.alunoModel.getNome() + "  -  " + this.alunoModel.getRg() + "  -  " + this.alunoModel.getEmail());
         this.alunoRepository.salvar(this.alunoModel);
     }
 
+    public void buscar(){
+        this.listaDeAlunos = this.alunoRepository.buscarTodos();
+    }
+    
     public AlunoModel getAlunoModel() {
         return alunoModel;
     }
@@ -43,6 +50,14 @@ public class AlunoController {
 
     public void setAlunoRepository(AlunoRepository alunoRepository) {
         this.alunoRepository = alunoRepository;
+    }
+
+    public List<AlunoModel> getListaDeAlunos() {
+        return listaDeAlunos;
+    }
+
+    public void setListaDeAlunos(List<AlunoModel> listaDeAlunos) {
+        this.listaDeAlunos = listaDeAlunos;
     }
     
 }
