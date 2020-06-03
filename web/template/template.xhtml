@@ -15,7 +15,7 @@ and open the template in the editor.
     </h:head>
     <h:body>
         <div class="container">
-            <div class="row" style="margin-bottom: 2%">
+            <div class="row" style="margin-bottom: 3%; margin-top: 3%">
                 <ui:insert name="cabecalho">
                     <div class="col-md-2">
                         <h:link outcome="/index.xhtml" >
@@ -30,11 +30,12 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-md-3">
                     <ui:insert name="menu">
-                        <ul>
-                            <li><h:link value="Principal" outcome="/index.xhtml" /></li>
-                            <li><h:link value="Cadastrar Aluno" outcome="/views/aluno/cadastrarAluno.xhtml" /></li>
-                            <li><h:link value="Buscar Alunos" outcome="/views/aluno/buscarAluno.xhtml" /></li>
-                        </ul>
+                        <nav class="nav flex-column">
+                            <h:link class="nav-link" value="Principal" outcome="/index.xhtml" />
+                            <h:link class="nav-link" value="Cadastrar Aluno" outcome="/views/aluno/cadastrarAluno.xhtml" />
+                            <h:link class="nav-link" value="Buscar Alunos" outcome="/views/aluno/buscarAluno.xhtml" />
+                            <h:link class="nav-link" value="Login" outcome="/login.xhtml" />
+                        </nav>
                     </ui:insert>
                 </div>
 

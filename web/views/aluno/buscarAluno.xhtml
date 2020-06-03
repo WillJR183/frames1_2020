@@ -6,14 +6,28 @@
                 template="/template/template.xhtml">
 
     <ui:define name="conteudo">
-        <h3>Resultado da busca por alunos</h3>
-        <table class="table" onload="#{alunoController.buscar()}">
+        <h:form class="form-inline" style="margin-top: 2%">
+            <div class="form-group mb-2 col-md-2">
+                <label for="lblNome" class="sr-only">lblNome</label>
+                <input type="text" readonly="readonly" class="form-control-plaintext" id="lblNome" value="Nome:"/>
+            </div>
+            <div class="form-group mb-2 col-md-4">
+                <label for="nome" class="sr-only">Nome</label>
+                <h:inputText class="form-control" value="#{alunoController.alunoModel.nome}"/>
+            </div>
+            <h:commandButton class="btn btn-primary mb-2" value="Buscar" action="#{alunoController.buscarPorNome()}"/>
+        </h:form>
+
+        <table class="table" style="margin-top: 3%">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">E-Mail</th>
                     <th scope="col">idade</th>
+                    <th scope="col">estado</th>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +37,17 @@
                         <td>#{aluno.nome}</td>
                         <td>#{aluno.email}</td>
                         <td>#{aluno.idade}</td>
+                        <td>#{aluno.estado.nome}</td>
+                        <td>
+                            <h:form>
+                                <h:commandButton class="btn btn-info" value="Editar" action= "#{alunoController.editarPorID(aluno.idpessoa)}"/>
+                            </h:form>
+                        </td>
+                        <td>
+                            <h:form>
+                                <h:commandButton class="btn btn-danger" value="Excluir" onclick="return confirm('Deseja realmente excluir o registro?')" action= "#{alunoController.excluirPorID(aluno.idpessoa)}"/>
+                            </h:form>
+                        </td>
                     </tr>
                 </ui:repeat> 
             </tbody>
